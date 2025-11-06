@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图书管理交流购买平台 - BookHub</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-header">
+            <h1>📚 BookHub 图书管理交流购买平台</h1>
+            <p>一站式图书资源共享与交易平台</p>
+        </div>
+        
+        <div class="login-container">
+            <div class="login-tabs">
+                <button class="tab-btn active" onclick="showTab('user')">用户登录</button>
+                <button class="tab-btn" onclick="showTab('admin')">管理员登录</button>
+            </div>
+            
+            <!-- 用户登录 -->
+            <div id="user-tab" class="tab-content active">
+                <form class="login-form" onsubmit="handleUserLogin(event)">
+                    <h2>用户登录</h2>
+                    <div class="input-group">
+                        <input type="text" id="user-username" placeholder="用户名/学号" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="user-password" placeholder="密码" required>
+                    </div>
+                    <div class="form-options">
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="remember-me">
+                            <span class="checkmark"></span>
+                            记住我
+                        </label>
+                        <a href="#" class="forgot-password">忘记密码？</a>
+                    </div>
+                    <button type="submit" class="login-btn">登录</button>
+                    <p class="register-link">还没有账号？<a href="#" onclick="showRegister()">立即注册</a></p>
+                </form>
+            </div>
+            
+            <!-- 管理员登录 -->
+            <div id="admin-tab" class="tab-content">
+                <form class="login-form" onsubmit="handleAdminLogin(event)">
+                    <h2>管理员登录</h2>
+                    <div class="input-group">
+                        <input type="text" id="admin-username" placeholder="管理员账号" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="admin-password" placeholder="密码" required>
+                    </div>
+                    <button type="submit" class="login-btn admin-btn">登录</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>
